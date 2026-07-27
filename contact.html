@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - My Blog</title>
+  <title>Contact - Derek Barus</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <header>
-    <h1>Contact me</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1 class="logo">Derek Barus</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+      </nav>
+    </div>
   </header>
-
-  <main>
+  <main class="container">
     <section class="contact">
-      <h2>Contact me here</h2>
-
+      <h2>Get In Touch</h2>
+      <p>I'm always open to discussing new opportunities, collaborations, or just chatting about technology. Feel free to reach out!</p>
       <form id="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -37,11 +40,9 @@
       </form>
     </section>
   </main>
-
   <footer>
-    <p>My Blog</p>
+    <p>&copy; 2025 Derek Barus. Built with HTML, CSS and JavaScript.</p>
   </footer>
-
   <script src="js/script.js"></script>
 </body>
 </html>

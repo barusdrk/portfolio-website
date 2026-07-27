@@ -3,44 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio Page</title>
+  <title>Projects - Derek Barus</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">My Blog</h1>
+      <h1 class="logo">Derek Barus</h1>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
       </nav>
     </div>
   </header>
   <main class="container">
-    <section class="intro">
+    <section class="projects">
       <h2>My Projects</h2>
-      <div class="project">
-      <h3>Project 1: Personal Blog</h3>
-      <main class="container">
-        <section class="intro">
-          <h2>Welcome to My Blog</h2>
-          <p>A simple blogging website built with HTML, CSS, and JavaScript.</p>
-        </section>
-      </main>
-      <a href="https://github.com/barusdrk" target="_blank">View on GitHub</a>
+      <div class="project-list">
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>A responsive portfolio website built with HTML, CSS, and JavaScript. Showcases skills, projects, and contact information.</p>
+          <a href="https://github.com/barusdrk/portfolio-website" target="_blank" class="btn">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer>
-    <p>Built with HTML & CSS</p>
+    <p>&copy; 2025 Derek Barus. Built with HTML, CSS and JavaScript.</p>
   </footer>
-  <script>
-    // Toggle menu for mobile
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
