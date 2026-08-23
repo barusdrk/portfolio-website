@@ -1,66 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Derek Barus - Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="logo">Derek Barus</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button id="menu-toggle" class="menu-toggle">☰</button>
-      </nav>
-    </div>
-  </header>
-  <main class="container">
-    <section class="intro">
-      <img src="images/233439562.png" alt="Derek Barus" class="profile-img">
-      <h2>Welcome to my Portfolio</h2>
-      <p>Hello! I'm Derek Barus, a programmer with expertise in web development. This portfolio showcases my skills and projects. Feel free to explore and get in touch!</p>
-      <a href="https://github.com/barusdrk/" class="btn">View my GitHub</a>
-    </section>
-    <section class="certificates container">
-      <h2>Certificates</h2>
-      <div class="cert-grid">
-        <article class="certificate-card">
-          <a href="https://www.theforage.com/completion-certificates/j43dGscQHtJJ57N54/a77WE3de8qrxWferQ_j43dGscQHtJJ57N54_69556389beda68c473f6ffff_1767295605419_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="cert-preview">
-              <iframe src="https://www.theforage.com/completion-certificates/j43dGscQHtJJ57N54/a77WE3de8qrxWferQ_j43dGscQHtJJ57N54_69556389beda68c473f6ffff_1767295605419_completion_certificate.pdf" title="Certificate preview 1" loading="lazy"></iframe>
-            </div>
-            <p class="cert-title">The Forage — Program Completion (Certificate 1)</p>
-          </a>
-        </article>
-        <article class="certificate-card">
-          <a href="https://www.theforage.com/completion-certificates/nkmk7gJitYs4TBvoA/9Wvq4L2WCFQDyyPp3_nkmk7gJitYs4TBvoA_69556389beda68c473f6ffff_1767370329040_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="cert-preview">
-              <iframe src="https://www.theforage.com/completion-certificates/nkmk7gJitYs4TBvoA/9Wvq4L2WCFQDyyPp3_nkmk7gJitYs4TBvoA_69556389beda68c473f6ffff_1767370329040_completion_certificate.pdf" title="Certificate preview 2" loading="lazy"></iframe>
-            </div>
-            <p class="cert-title">The Forage — Program Completion (Certificate 2)</p>
-          </a>
-        </article>
-        <article class="certificate-card">
-          <a href="https://www.theforage.com/completion-certificates/fgHAi6dLhpRsGKyyN/da2T3WZCbMAJD7bNB_fgHAi6dLhpRsGKyyN_69556389beda68c473f6ffff_1767383044263_completion_certificate.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="cert-preview">
-              <iframe src="https://www.theforage.com/completion-certificates/fgHAi6dLhpRsGKyyN/da2T3WZCbMAJD7bNB_fgHAi6dLhpRsGKyyN_69556389beda68c473f6ffff_1767383044263_completion_certificate.pdf" title="Certificate preview 3" loading="lazy"></iframe>
-            </div>
-            <p class="cert-title">The Forage — Program Completion (Certificate 3)</p>
-          </a>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Derek Barus. Built with HTML, CSS and JavaScript.</p>
-  </footer>
-  <script src="js/script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Portfolio of Derek, a full-stack developer building practical AI SaaS applications."
+    />
+
+    <title>Derek Barus | Full-Stack AI Developer</title>
+
+    <script>
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
+  </body>
 </html>
