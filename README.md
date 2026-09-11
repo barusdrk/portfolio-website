@@ -1,75 +1,231 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern personal portfolio website built with **React, TypeScript, and Vite**. It showcases full-stack development skills and a collection of AI SaaS projects focused on practical productivity and business use cases.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Portfolio:** [portfolio-website-kappa-rouge-94.vercel.app](https://portfolio-website-kappa-rouge-94.vercel.app/)
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio presents my work as a full-stack developer, with a focus on building modern web applications and AI-powered SaaS products.
 
-## Expanding the ESLint configuration
+The website provides an overview of my:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Development skills
+* Technologies and tools
+* AI SaaS projects
+* Full-stack development experience
+* GitHub projects
+* Live applications
+* Contact information
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The portfolio is designed to provide a clear overview of both the technologies I use and the applications I build.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Featured Projects
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### AI Text Summarizer
 
+An AI-powered application that transforms long text into concise summaries and actionable information.
+
+**Repository:** [AI Text Summarizer on GitHub](https://github.com/barusdrk/ai-text-summarizer)
+
+### AI Email Reply Assistant
+
+An AI-powered email assistant that generates professional customer email replies using configurable tones and response lengths.
+
+**Repository:** [AI Email Reply Assistant on GitHub](https://github.com/barusdrk/ai-email-reply-assistant)
+
+### AI Meeting Notes Generator
+
+An AI-powered meeting productivity application for processing meetings, generating summaries, extracting decisions, and managing action items.
+
+**Repository:** [AI Meeting Notes Generator on GitHub](https://github.com/barusdrk/ai-meeting-notes-generator)
+
+### AI Resume Analyzer
+
+An AI-powered resume analysis application that evaluates resumes against job descriptions and provides ATS-oriented feedback.
+
+**Repository:** [AI Resume Analyzer on GitHub](https://github.com/barusdrk/ai-resume-analyzer)
+
+### AI Document Q&A
+
+An AI document application focused on asking questions about uploaded documents and retrieving relevant information.
+
+## Features
+
+* Responsive portfolio layout
+* Hero section introducing the developer
+* About section
+* Technical skills overview
+* Project filtering
+* Project detail modal
+* GitHub project links
+* Live demo links
+* Contact section
+* Responsive mobile navigation
+* Light and dark themes
+* Persistent theme preference
+* Accessible interactive controls
+* Modern responsive UI
+
+## Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* HTML5
+* CSS3
+
+### UI
+
+* Lucide React
+* Responsive CSS
+* CSS custom properties
+* Light/dark theme system
+
+### Development
+
+* ESLint
+* TypeScript
+* Vite development server
+* Git and GitHub
+
+## Project Structure
+
+```text
+portfolio-website/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── About.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Header.tsx
+│   │   ├── ProjectCard.tsx
+│   │   └── ProjectModal.tsx
+│   ├── data/
+│   ├── types/
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Make sure you have installed:
 
+* Node.js
+* npm
+* Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/barusdrk/portfolio-website.git
+cd portfolio-website
 ```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+Vite will start the development server and provide a local URL.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview the Production Build
+
+```bash
+npm run preview
+```
+
+### Run Linting
+
+```bash
+npm run lint
+```
+
+## Deployment
+
+The project is a client-side Vite application and can be deployed as a static site.
+
+### Vercel
+
+Recommended production deployment:
+
+```text
+Framework: Vite
+Build command: npm run build
+Output directory: dist
+```
+
+### Render
+
+The project can also be deployed as a Render Static Site:
+
+```text
+Build command: npm install && npm run build
+Publish directory: dist
+```
+
+Both platforms can be connected directly to the GitHub repository for automatic deployments.
+
+## Design
+
+The portfolio uses a visual style with:
+
+* Soft light-mode backgrounds
+* Dark-mode support
+* Responsive project cards
+* Clear typography
+* Subtle borders and shadows
+* Responsive layouts for desktop, tablet, and mobile
+
+## Project Categories
+
+Projects are organized around practical development and AI SaaS categories, including:
+
+* AI
+* Productivity
+* Document AI
+* Full Stack
+* Developer Tools
+
+These categories describe the primary purpose or technical scope of each project and can be expanded as the portfolio grows.
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0**. ([GitHub][1])
+
+See the `LICENSE` file for details.
+
+## Author
+
+**Derek Barus**
+
+GitHub: [@barusdrk](https://github.com/barusdrk)
