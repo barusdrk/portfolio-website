@@ -4,7 +4,7 @@ A modern personal portfolio website built with **React, TypeScript, and Vite**. 
 
 ## Live Demo
 
-**Portfolio:** [portfolio-website-kappa-rouge-94.vercel.app](https://portfolio-website-kappa-rouge-94.vercel.app/)
+**Portfolio:** [barusdrk-portfolio-website.vercel.app](https://barusdrk-portfolio-website.vercel.app)
 
 ## About
 
