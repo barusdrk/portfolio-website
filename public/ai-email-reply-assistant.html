@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-assisted customer email support for small businesses. Connect Gmail and Outlook, generate context-aware reply drafts, and keep people in control with review and escalation workflows." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>AI Email Reply Assistant | Customer Support Automation</title>
+  <style>
+    :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#eef2ff;background:#0b1020;font-synthesis:none;text-rendering:optimizeLegibility;--muted:#a5b4cc;--line:rgba(190,205,230,.16);--panel:#111a2d;--accent:#8b9cff;--accent2:#60d7c3}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:radial-gradient(ellipse at 75% 0%,rgba(93,111,220,.18),transparent 38%),#0b1020;color:#eef2ff}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:-.04em}.brand span{color:var(--accent)}.navlinks{display:flex;gap:25px;align-items:center;color:var(--muted);font-size:.92rem}.navlinks a:hover,.textlink:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 19px;border-radius:10px;font-weight:750;border:1px solid transparent;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#0b1020}.secondary{border-color:var(--line);background:rgba(255,255,255,.035)}
+    .hero{padding:100px 0 84px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid rgba(139,156,255,.35);border-radius:999px;color:#c4ccff;background:rgba(139,156,255,.09);font-size:.82rem;font-weight:700}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2)}h1{max-width:850px;margin:25px 0 20px;font-size:clamp(2.8rem,7vw,5.7rem);line-height:.99;letter-spacing:-.07em}h1 span{color:var(--accent)}.lead{max-width:700px;color:var(--muted);font-size:1.15rem;line-height:1.8}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.fine{margin-top:16px;color:#8292ad;font-size:.86rem}
+    .preview{margin:20px 0 0;padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(22,34,57,.96),rgba(13,21,38,.96));box-shadow:0 30px 90px rgba(0,0,0,.25)}.previewtop{display:flex;justify-content:space-between;align-items:center;padding:4px 4px 16px;color:var(--muted);font-size:.82rem}.lights{display:flex;gap:6px}.lights i{width:8px;height:8px;border-radius:50%;background:#5b6880}.window{display:grid;grid-template-columns:220px 1fr;min-height:260px;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#0d1526}.sidebar{padding:20px;border-right:1px solid var(--line);color:#a9b6ce;font-size:.85rem}.sideitem{padding:10px;border-radius:7px;margin:5px 0}.sideitem.active{background:rgba(139,156,255,.14);color:#e4e8ff}.mail{padding:24px}.mailhead{display:flex;justify-content:space-between;gap:12px;color:#dce4f5;font-weight:700}.tag{font-size:.72rem;color:#8ce4d5;background:rgba(96,215,195,.1);padding:6px 9px;border-radius:999px;white-space:nowrap}.mail p{color:#a5b4cc;line-height:1.65;font-size:.9rem}.draft{margin-top:18px;padding:16px;border:1px solid rgba(139,156,255,.27);border-radius:10px;background:rgba(139,156,255,.06)}.draft strong{color:#cbd2ff;font-size:.83rem}.draft p{margin-bottom:0}
+    section.content{padding:86px 0;border-top:1px solid var(--line)}.sectionhead{max-width:700px;margin-bottom:35px}.kicker{color:var(--accent2);font-size:.75rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}h2{font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.055em;line-height:1.08;margin:12px 0}.sectionhead p,.card p,.step p,.faq p{color:var(--muted);line-height:1.75}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:24px;border:1px solid var(--line);border-radius:14px;background:rgba(17,26,45,.76)}.icon{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;color:#cbd2ff;background:rgba(139,156,255,.12);font-weight:800}.card h3{margin:18px 0 8px;font-size:1.05rem}.card p{margin:0;font-size:.93rem}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:24px 0;border-top:1px solid var(--line)}.num{color:var(--accent);font-size:.8rem;font-weight:800;letter-spacing:.1em}.step h3{margin:12px 0 8px}.step p{margin:0}
+    .safety{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:32px;border:1px solid rgba(96,215,195,.22);border-radius:18px;background:linear-gradient(130deg,rgba(96,215,195,.07),rgba(139,156,255,.07))}.safety ul{padding-left:19px;color:var(--muted);line-height:2}.safety strong{color:#e9fff9}.faqgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.faq{padding:22px;border-bottom:1px solid var(--line)}.faq h3{margin:0 0 8px;font-size:1rem}.faq p{margin:0;font-size:.92rem}.cta{padding:58px 30px;text-align:center;border:1px solid rgba(139,156,255,.25);border-radius:20px;background:radial-gradient(ellipse at 50% 0%,rgba(139,156,255,.18),transparent 65%),var(--panel)}.cta p{max-width:600px;margin:12px auto 24px;color:var(--muted);line-height:1.7}.footer{padding:28px 0;border-top:1px solid var(--line);color:#8292ad;font-size:.84rem}.footerinner{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:760px){.navlinks a:not(.btn){display:none}.hero{padding:72px 0 60px}.grid,.steps,.faqgrid,.safety{grid-template-columns:1fr}.window{grid-template-columns:1fr}.sidebar{display:none}.mail{padding:18px}.footerinner{flex-direction:column}.wrap{width:min(100% - 32px,1120px)}section.content{padding:65px 0}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="/">AI Email <span>Reply Assistant</span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#safety">Human control</a>
+      <a class="btn secondary" href="https://github.com/barusdrk/ai-email-reply-assistant" target="_blank" rel="noreferrer">View project</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="dot"></span> AI-assisted customer email support</div>
+      <h1>Spend less time writing support emails. <span>Keep every reply in control.</span></h1>
+      <p class="lead">Bring Gmail and Outlook support workflows together with context-aware AI reply drafts, company knowledge, and review and escalation safeguards built for real customer conversations.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:barusdrk@gmail.com?subject=AI%20Email%20Reply%20Assistant%20demo&body=Hi%20Derek%2C%0A%0AI%27d%20like%20to%20see%20a%20demo%20of%20the%20AI%20Email%20Reply%20Assistant.%0A%0ACompany%3A%0AMonthly%20customer%20email%20volume%3A%0ACurrent%20support%20workflow%3A%0A%0AThanks.">Request a product walkthrough <span aria-hidden="true">↗</span></a>
+        <a class="btn secondary" href="https://ai-email-reply-assistant-client.vercel.app/settings" target="_blank" rel="noreferrer">Open the app</a>
+      </div>
+      <p class="fine">Designed for small e-commerce teams, online businesses, SaaS companies and customer support teams.</p>
+      <div class="preview" aria-label="Illustrative email workflow preview">
+        <div class="previewtop"><span>PRODUCT WORKFLOW PREVIEW</span><span class="lights"><i></i><i></i><i></i></span></div>
+        <div class="window">
+          <aside class="sidebar"><div class="sideitem active">Inbox &nbsp; 12</div><div class="sideitem">AI reply drafts</div><div class="sideitem">Needs review</div><div class="sideitem">Knowledge base</div><div class="sideitem">Connected accounts</div></aside>
+          <div class="mail">
+            <div class="mailhead"><span>Order delivery question</span><span class="tag">Draft ready for review</span></div>
+            <p><strong>Customer message</strong><br/>Hi, could you let me know when my order is expected to arrive?</p>
+            <div class="draft"><strong>AI-GENERATED REPLY DRAFT</strong><p>Hello, thanks for reaching out. I’d be happy to help check the delivery details for your order. Please share your order number so we can look into the latest status.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="content">
+      <div class="wrap">
+        <div class="sectionhead"><div class="kicker">Built around your workflow</div><h2>Useful automation, with the context support teams need.</h2><p>Generate more consistent first drafts without treating every customer message as an isolated prompt.</p></div>
+        <div class="grid">
+          <article class="card"><div class="icon">01</div><h3>Gmail and Outlook workflows</h3><p>Connect supported email accounts and synchronize customer conversations into one support workflow.</p></article>
+          <article class="card"><div class="icon">02</div><h3>Context-aware reply drafts</h3><p>Generate suggested replies using the incoming message, conversation history and relevant company knowledge.</p></article>
+          <article class="card"><div class="icon">03</div><h3>Company knowledge base</h3><p>Organize support information such as products, pricing, billing, refunds, shipping and troubleshooting.</p></article>
+          <article class="card"><div class="icon">04</div><h3>Review and approval</h3><p>Keep people involved in customer communication with draft review and approval workflows.</p></article>
+          <article class="card"><div class="icon">05</div><h3>Escalation and policy checks</h3><p>Route sensitive, uncertain or policy-dependent requests for human attention rather than treating them as routine replies.</p></article>
+          <article class="card"><div class="icon">06</div><h3>Configurable automation</h3><p>Use draft-generation and sending settings to define how much of the workflow should be automated.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="content">
+      <div class="wrap">
+        <div class="sectionhead"><div class="kicker">How it works</div><h2>From incoming email to reviewed response.</h2><p>A straightforward workflow that supports automation while keeping customer context and business rules in view.</p></div>
+        <div class="steps">
+          <article class="step"><div class="num">STEP 01</div><h3>Connect an inbox</h3><p>Connect a supported Gmail or Outlook account and synchronize incoming customer conversations.</p></article>
+          <article class="step"><div class="num">STEP 02</div><h3>Generate a draft</h3><p>The support workflow uses the message, thread history and relevant knowledge to prepare a suggested response.</p></article>
+          <article class="step"><div class="num">STEP 03</div><h3>Review, approve or escalate</h3><p>Review the draft, approve an appropriate response, or send the request for human attention when needed.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="safety" class="content">
+      <div class="wrap">
+        <div class="safety">
+          <div><div class="kicker">Human control matters</div><h2>Automation should know when to stop.</h2><p class="lead" style="font-size:1rem">Customer support is not just about replying quickly. It is also about respecting company policies and recognizing requests that need a person.</p></div>
+          <ul><li>Human review and approval workflows</li><li>Escalation for sensitive or uncertain requests</li><li>Knowledge- and policy-aware support decisions</li><li>Configurable automatic draft and sending settings</li></ul>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="wrap">
+        <div class="sectionhead"><div class="kicker">Who it is for</div><h2>For teams handling repeat customer questions.</h2><p>Especially useful when support requests arrive by email and answers depend on your products, policies and previous conversations.</p></div>
+        <div class="grid">
+          <article class="card"><h3>E-commerce businesses</h3><p>Shipping, order questions, returns, refunds and product enquiries.</p></article>
+          <article class="card"><h3>SaaS and online services</h3><p>Account access, billing, troubleshooting and product support.</p></article>
+          <article class="card"><h3>Lean support teams</h3><p>Teams looking to reduce repetitive drafting while keeping people responsible for important decisions.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="wrap">
+        <div class="sectionhead"><div class="kicker">Frequently asked questions</div><h2>Before you take a closer look.</h2></div>
+        <div class="faqgrid">
+          <article class="faq"><h3>Does it work with Gmail and Outlook?</h3><p>The application includes integrations and email synchronization workflows for Gmail and Outlook.</p></article>
+          <article class="faq"><h3>Does AI send every reply automatically?</h3><p>No. The workflow supports draft review, approval and escalation. Automatic sending is configurable and should be enabled only with suitable policies and safeguards.</p></article>
+          <article class="faq"><h3>Can it use our company policies?</h3><p>The knowledge base is designed to organize company support information, including refund, shipping, billing and troubleshooting guidance.</p></article>
+          <article class="faq"><h3>Can I see a demonstration?</h3><p>Yes. Request a walkthrough and share a little about your support workflow so the demonstration can focus on relevant use cases.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="wrap">
+        <div class="cta">
+          <div class="kicker">See how it could fit your workflow</div>
+          <h2>Let's explore your customer email process.</h2>
+          <p>Tell me about your inbox, the questions your team handles most often and where repetitive work is slowing you down. We can walk through the product together.</p>
+          <a class="btn primary" href="mailto:barusdrk@gmail.com?subject=AI%20Email%20Reply%20Assistant%20demo&body=Hi%20Derek%2C%0A%0AI%27d%20like%20to%20discuss%20the%20AI%20Email%20Reply%20Assistant.%0A%0ACompany%3A%0ARole%3A%0AMonthly%20customer%20email%20volume%3A%0ACurrent%20support%20tools%3A%0ABiggest%20support%20challenge%3A%0A%0AThanks.">Request a walkthrough ↗</a>
+          <p class="fine">Built by Derek Barus · <a class="textlink" href="https://github.com/barusdrk/ai-email-reply-assistant" target="_blank" rel="noreferrer">GitHub repository</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footerinner"><span>© <span id="year"></span> AI Email Reply Assistant</span><span>Built by Derek Barus · <a class="textlink" href="https://barusdrk-portfolio-website.vercel.app">Portfolio</a></span></div></footer>
+  <script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+</body>
+</html>
